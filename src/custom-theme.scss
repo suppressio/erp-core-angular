@@ -1,0 +1,39 @@
+@import '@angular/material/theming';
+@include mat-core();
+
+$light-app-theme: mat-light-theme((
+    color: (
+        primary: mat-palette($mat-blue-grey),
+        accent: mat-palette($mat-light-green),
+        warn: mat-palette($mat-red),
+    )
+));
+
+$dark-app-theme: mat-dark-theme((
+    color: (
+        primary: mat-palette($mat-blue-grey),
+        accent: mat-palette($mat-blue-gray, A200, A100, A400),
+        warn: mat-palette($mat-amber),
+    )
+));
+
+@mixin body-theme($theme) {
+    $_background: map-get($theme, background);
+    // $_font-color: map-get($theme, primary);
+
+    $app-background-color: mat-color($_background, background);
+    // $app-font-color: mat-color($_font-color, primary);
+
+    body {
+        background-color: $app-background-color;
+        // color: $app-font-color;
+    }
+}
+
+@include angular-material-theme($light-app-theme);
+@include body-theme($light-app-theme);
+
+.dark-theme {
+    @include angular-material-color($dark-app-theme);
+    @include body-theme($dark-app-theme);
+}

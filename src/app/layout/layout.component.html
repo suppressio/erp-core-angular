@@ -1,13 +1,22 @@
-<mat-toolbar class="top mat-elevation-z10"  fxLayout="row">
+<mat-toolbar class="top mat-elevation-z10" color="primary" fxLayout="row">
   <span>{{title}}</span>
   
   <span class="spacer"></span>
 
-  <app-user-badge></app-user-badge>
+  <div style=" right: 0px; display: inline-block;" > 
+    <button mat-icon-button aria-label="Theme selection" (click)="toggleTheme()">
+      <mat-icon *ngIf="theme=='light'">brightness_5</mat-icon>
+      <mat-icon *ngIf="theme=='dark'">brightness_3</mat-icon>
+    </button>
+  </div>
+  &nbsp;&nbsp;
+  <div style=" right: 0px; display: inline-block;" > 
+    <app-user-badge></app-user-badge>
+  </div>
 
   <!-- <div *ngIf="!sidebarVisible">&nbsp;&nbsp;|&nbsp;&nbsp; -->
     <!-- <mat-icon aria-hidden="false" aria-label="Show Sidebar" (click)="sidebarToggle()">menu</mat-icon> -->
-
+  
   <div style=" right: 0px; display: inline-block;" > &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
     <button mat-icon-button [routerLink]="''" aria-label="Ritorna alla home">
       <mat-icon>home</mat-icon>
