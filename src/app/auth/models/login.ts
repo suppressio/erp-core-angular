@@ -19,3 +19,9 @@ export interface Signup{
 export interface Role{
 
 }
+
+export interface JsSignup{
+    email: String;
+    username: String;
+    password: String;
+}

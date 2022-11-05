@@ -1,0 +1,99 @@
+div.main{
+    height: calc(100%);
+    min-height: 600px;
+    background: rgb(191,191,191);
+    background: linear-gradient(90deg, rgba(191,191,191,1) 1%, rgba(255,255,255,1) 98%);
+  }
+  
+  
+  #login{
+    height: 300px;
+    width: 400px;
+    position: absolute;
+    top: calc(20vh);
+    left: calc(50vw - 200px);
+    background-color: white;
+    border: 2px solid #000;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 10px #bbb;
+  }
+  
+  #inner-login{
+    width: fit-content;
+    margin: auto;
+  
+    mat-icon.eye {
+      color: rgb(150, 150, 150);
+      vertical-align: text-bottom;
+      font-size: medium;
+      margin-left: -30px;
+      padding: 5px;
+    }
+    input#username{
+      background-color: aliceblue;
+      margin: 0;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+    }
+    input#password{
+      background-color: aliceblue;
+      margin: 0;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+    }
+  
+    label{
+      font-weight: lighter;
+      font-size: smaller;
+    }
+  }
+  
+  #err-login{
+    width: fit-content;
+    color: tomato;
+    margin: 0 auto;
+  }
+  
+  #loginButtons{
+    width: fit-content;
+    margin: 0 auto;
+    button{
+      margin: 0 auto;
+      background-color: white;
+      border: 2px solid #008CBA;
+      border-radius: 8px;
+      color: #008CBA;
+      padding: 10px 28px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    button:disabled{
+      margin: auto;
+      background-color: white;
+      border: 2px solid #bbb;
+      border-radius: 8px;
+      color: #bbb;
+      padding: 10px 28px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+    }
+  
+  }
+  
+  input:-webkit-autofill {
+    box-shadow: 0 0 0 1000px aliceblue inset !important;
+    -webkit-box-shadow: 0 0 0 1000px aliceblue inset !important;
+  }
+  
+  div.logo-bottom-small{
+    position: absolute;
+    margin: 10px;
+    bottom: 0px;
+    right: 0px;
+  }
+  

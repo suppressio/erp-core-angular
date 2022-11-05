@@ -1,0 +1,40 @@
+/* TOOLBAR */
+mat-toolbar{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    z-index: 999;
+    background-color: #6e9600;
+    font-size: small;
+    font-weight: lighter;
+    font-style: normal;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    color: #ebefff;
+    .spacer {
+      flex: 1 1 auto;
+    }
+  }
+  
+  mat-toolbar-row.top{
+    padding-left: 45px;
+    height: 44px;
+  }
+  
+  .blur{
+    filter: blur(2px);
+  }
+
+/** main content */
+div.da-container{
+    height: calc(100vh - 44px);
+    padding-top: 44px;
+    display: flex;
+
+    div.da-content{
+        flex: 1 1 auto;
+    }
+}
+      

@@ -1,0 +1,37 @@
+<div class="main">
+    <br>
+    <br>
+    <div mat-dialog-content [formGroup]="form">
+      <div id="login">
+  
+        <div id="inner-login">
+          <br>
+          <label for="user"><b>Username: </b></label>
+          <input type="text" placeholder="Enter Username" id="username"
+            formControlName="user"
+            (keydown.enter)="doLogin()"><br>
+          <label for="pass"><br><br><b>Password: </b></label>
+          <input placeholder="Enter Password" id="password"
+            [type]="showPassword ? 'text' : 'password' "
+            formControlName="pass"
+            (keydown.enter)="doLogin()">
+          <a (click)="togglePassword()" style="cursor: default;">
+            <mat-icon class="eye">{{showPassword ? 'visibility' : 'visibility_off'}}</mat-icon>
+          </a><br>
+          <br>
+          <div mat-dialog-actions id="loginButtons">
+            <button type="submit"
+              (click)="doLogin()"
+              [disabled]="!validForm()"
+              cdkFocusInitial>
+              Login
+              <div style="display: inline-block;"><mat-spinner *ngIf="loading" diameter="15"></mat-spinner></div>
+            </button>
+          </div>
+          <div id="err-login"><label><b>{{loginError}}</b></label></div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="logo-bottom-small"><img src="../../assets/logo.svg" height="62px" width="200px"></div> -->
+  </div>
+  

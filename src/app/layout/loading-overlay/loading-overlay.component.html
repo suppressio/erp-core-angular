@@ -1,0 +1,11 @@
+<div class="loading" *ngIf="loading.isLoading || loading.isSaving">
+    <div class="loadingText">
+        <div *ngIf="loading.isLoading">loading</div>
+        <div *ngIf="loading.isSaving">saving, please wait</div>
+        <div class="dot1"></div><div class="dot2"></div><div class="dot3"></div>
+    </div>
+    <div class="modale">
+        <mat-progress-bar class="progress" [mode]="loading.isLoading?'indeterminate':'query'"></mat-progress-bar>
+        <!-- modale div-->
+    </div>
+</div>
